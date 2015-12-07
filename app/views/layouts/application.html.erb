@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EmailSendSignup</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="navbar navbar-default" role="navigation">
+		<div class="navbar-inner">
+        <div class="container">
+           	<nav class="collapse navbar-collapse navbar-ex1-collapse">
+				
+				
+					<ul class="nav navbar-nav navbar-right" id="logo" >
+						<%= link_to "New Member", new_user_path %>&nbsp &nbsp
+					</ul>
+					<ul class="nav navbar-nav navbar-left" id="logo" >
+						<%= link_to "Member List", users_path %>
+					</ul>
+					&nbsp &nbsp
+					<ul class="nav navbar-nav pull-right" id="logo" >
+						<!--<%= link_to "New Member", new_user_path %>-->
+					</ul>
+			
+			</nav>
+	
+		</div>
+	</header>
+		<div id="main_content" class="container">
+		<% flash.each do |key, value| %>
+			<%= content_tag(:div, class: "alert alert-#{key}") do %>
+			<p><%= value %></p>
+			<% end %>
+		<% end %>
+		<div id="content" class="col-md-9 center-block">
+			<%= image_tag("American_legion.png", :alt => "American_legion_image") %></p>
+			<%= yield %>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+
+
+
+</body>
+</html>
