@@ -59,9 +59,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "smtp.sendgrid.net",
   :port                 => 587,
-  :user_name            => 'martylavin1',
-  :password             => 'Vickieelder1',
+  :user_name            => ENV["SENDMAIL_USERNAME"],
+  :password             => ENV["SENDMAIL_PASSWORD"],
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
+
 
 end
