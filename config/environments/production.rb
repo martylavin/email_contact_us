@@ -22,8 +22,8 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
+  #config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_assets = false
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
@@ -59,8 +59,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "smtp.sendgrid.net",
   :port                 => 587,
-  :user_name            => ENV["SENDMAIL_USERNAME"],
-  :password             => ENV["SENDMAIL_PASSWORD"],
+  :user_name            => ENV["SENDGRID_USERNAME"],
+  :password             => ENV["SENDGRID_PASSWORD"],
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 
