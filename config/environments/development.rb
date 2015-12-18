@@ -34,6 +34,20 @@ Rails.application.configure do
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
+  #config.assets.raise_runtime_errors = true
+
+  #config.action_mailer.perform_deliveries = true
+
+
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #:address              => "smtp.gmail.com",
+  #:port                 => 587,
+  #:user_name            => ENV["GMAIL_USERNAME"],
+  #:password             => ENV["GMAIL_PASSWORD"],
+  #:authentication       => 'plain',
+  #:enable_starttls_auto => true  }
+
   config.assets.raise_runtime_errors = true
 
   config.action_mailer.perform_deliveries = true
@@ -41,13 +55,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
+  :address              => "smtp.sendgrid.net",
   :port                 => 587,
-  :user_name            => ENV["GMAIL_USERNAME"],
-  :password             => ENV["GMAIL_PASSWORD"],
+  :user_name            => 'martylavin1',
+  :password             => 'Vickieelder1',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
-
-
 
 end
