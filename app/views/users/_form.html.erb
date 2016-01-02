@@ -20,7 +20,15 @@
     <%= f.text_field :email %>
   </div>
   <div class="form-group">
-   <%= f.submit :value => "Create New Email Subscription User", :class => 'btn brn-lg btn-primary' %>
+
+
+ <% if  current_page?(root_path) %>
+    <p><%= link_to 'New Member', new_user_path, class: "btn brn-lg btn-primary" %></p>
+ <% else %>
+    <%= f.submit :value => "Create or Update Subscription User", :class => 'btn brn-lg btn-primary' %>
+ <% end %>
+
+   <!--<%= f.submit :value => "Create New Email Subscription User", :class => 'btn brn-lg btn-primary' %> -->
   
   </div>
 <% end %>

@@ -47,6 +47,19 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner'
+  gem 'minitest-spec-rails'
+  gem 'capybara-screenshot'
+  gem 'minitest-reporters', '1.0.5'
+
+end
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
