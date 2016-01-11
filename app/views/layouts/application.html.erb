@@ -38,8 +38,8 @@
 			<p><%= value %></p>
 			<% end %>
 		<% end %>
-		<div id="content" class="col-md-9 center-block">
-			<%= image_tag("American_legion.png", :alt => "American_legion_image") %></p>
+		<div id="content">
+		<p class="img-responsive center-block"><%= image_tag("American_legion.png", :alt => "American_legion_image", class: "img-responsive center-block") %></p>
 			<%= yield %>
 		</div>
 	</div>
