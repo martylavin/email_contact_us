@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all 
-    @users_filter = User.where(id: 2..3)
+    @users_filter = User.where(id: 1..399)
   end
 
   # GET /users/1
