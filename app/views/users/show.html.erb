@@ -1,20 +1,22 @@
 	<!--<p id="notice"><%= notice %></p>-->
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Email Message to Post 854:</strong>
-  <%= @user.message %>
-</p>
 </br>
+<%= form_for(@user) do |f| %>
+ 
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :placeholder => "Type your name here"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, :placeholder => "Type your email here."  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message %><br>
+    <%= f.text_area :message, size: "24x6", :placeholder => "Type your message here."  %>
+  </div>
+
+<% end %>
+
 
 <%= link_to 'Back to legion post 854 contact us page', "http://legionpost854.com/contact_us", class: "btn brn-lg btn-primary" %>
 
